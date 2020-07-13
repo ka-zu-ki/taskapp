@@ -7,11 +7,22 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
   <body>
-  <header>
-    <h1>Boards</h1>
+    <header class="header">
+      <p class="header_pageTitle">Boards</p>
+      <div class="dropdown">
+        <%= image_tag 'default-avatar.png', class: 'header_avatar dropbtn' %>
+      </div>
+      <hr>
+    </header>
+
+    
+
+    
+    
 
     <%= yield %>
   </body>
