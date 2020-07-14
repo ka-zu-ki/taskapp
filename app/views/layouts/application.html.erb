@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Taskapp</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
+<head>
+  <title>Taskapp</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
-    <header class="header">
-      <p class="header_pageTitle">Boards</p>
-      <div class="dropdown">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <header>
+    <div class="container clear">
+      <div>
+        <p>Boards</p>
+      </div>
+      <div class="header-right">
         <%= image_tag 'default-avatar.png', class: 'header_avatar dropbtn' %>
       </div>
-      <hr>
-    </header>
+       <div class="line"></div>
+    </div>
+  </header>
 
-    
+  <%= yield %>
+</body>
 
-    
-    
-
-    <%= yield %>
-  </body>
 </html>
