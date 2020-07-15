@@ -7,6 +7,11 @@
   <p>kazuki0825</p>
   <p>2020/4/1</p>
   <div class="card_detail">
-    <%= image_tag 'Combined Shape'%>
+    <div class="dropdown">
+      <%= image_tag 'Combined Shape', class:"dropbtn" %>
+      <div class="dropdown-content">
+        <%= link_to '編集',edit_board_path(@board) %>
+      </div>
+    </div>
   </div>
 </div>
