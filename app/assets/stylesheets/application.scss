@@ -1,5 +1,6 @@
 @import 'card';
 
+
 header {
 
   .clear::after {
@@ -60,8 +61,8 @@ header {
   }
 
   .card {
-    width: 362px;
-    height: 161px;
+    width: 368px;
+    height: 261px;
     left: 30px;
     top: 161px;
 
@@ -79,6 +80,8 @@ header {
       font-weight: normal;
       font-size: 18px;
       line-height: 25px;
+      margin-top: 8px;
+      margin-bottom: 16px;
 
       color: #000000;
     }
@@ -135,7 +138,14 @@ header {
       text-align: center;
 
       color: #000000;
+      
 
+    }
+
+    a {
+      text-decoration: none;
+     
+      
     }
   }
 }
