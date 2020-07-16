@@ -5,9 +5,10 @@
     = image_tag 'Oval.png'
   %p kazuki0825
   %p= @board.display_created_at
-  .card_detail
-    .dropdown
-      = image_tag 'Combined Shape', class:"dropbtn"
-      .dropdown-content
-        = link_to '編集',edit_board_path(@board)
-        = link_to '削除', board_path(@board), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' }
+  - if user_signed_in?
+    .card_detail
+      .dropdown
+        = image_tag 'Combined Shape', class:"dropbtn"
+        .dropdown-content
+          = link_to '編集',edit_board_path(@board)
+          = link_to '削除', board_path(@board), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' }
