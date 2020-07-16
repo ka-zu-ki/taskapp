@@ -4,7 +4,7 @@
     .card_content= board.content
     .card_icon
       = image_tag 'Oval.png'
-    %p kazuki0825
+    %p= board.author_name 
     %p= board.display_created_at
     .card_detail
       = image_tag 'Combined Shape'

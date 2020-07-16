@@ -3,9 +3,9 @@
   .card_content= @board.content
   .card_icon
     = image_tag 'Oval.png'
-  %p kazuki0825
+  %p= @board.author_name
   %p= @board.display_created_at
-  - if user_signed_in?
+  - if user_signed_in? && current_user.has_written?(@board)
     .card_detail
       .dropdown
         = image_tag 'Combined Shape', class:"dropbtn"
