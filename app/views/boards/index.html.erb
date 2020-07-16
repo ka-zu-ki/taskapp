@@ -2,20 +2,7 @@
   <h1>All boards</h1>
 
   <% @boards.each do |board| %>
-    <%= link_to board_path(board) do%>
-      <div class="card">
-        <div class="card_title"><%= board.title %></div>
-        <div class="card_content"><%= board.content %></div>
-        <div class="card_icon">
-          <%= image_tag 'Oval.png'%>
-        </div>
-        <p>kazuki0825</p>
-        <p>2020/4/1</p>
-        <div class="card_detail">
-          <%= image_tag 'Combined Shape'%>
-        </div>
-      </div>
-    <% end %>
+    <%= render 'board', board: board %>
   <% end %>
 
   <div class="add_new_bord">
