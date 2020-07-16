@@ -1,7 +1,7 @@
-class BoardsController < ApplicationController 
-  
+class BoardsController < ApplicationController
+
   before_action :set_board, only: [:show, :edit, :update]
-  
+
   def index
     @boards = Board.all
   end
@@ -40,8 +40,6 @@ class BoardsController < ApplicationController
     board.destroy!
     redirect_to root_path, notice: '削除に成功しました'
   end
-
-
 
   private
   def board_params

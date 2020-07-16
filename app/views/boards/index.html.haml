@@ -1,0 +1,7 @@
+.container
+  %h1 All boards
+  - @boards.each do |board|
+    = render 'board', board: board
+  .add_new_bord
+    = link_to new_board_path do
+      %p +Add new board
