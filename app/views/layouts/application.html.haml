@@ -18,8 +18,12 @@
         - else
           %div
             %p Boards
-        .header-right
-          = image_tag 'default-avatar.png', class: 'header_avatar dropbtn'
+        - if user_signed_in?
+          .header-right
+            = image_tag 'default-avatar.png', class: 'header_avatar dropbtn'
+            = link_to 'ログアウト', destroy_user_session_path, data: { method: 'delete' }
+        -else
+          = link_to 'ログイン', new_user_password_path
         .line
     - if flash.present?
       .flash
