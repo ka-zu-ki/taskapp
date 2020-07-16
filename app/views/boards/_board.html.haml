@@ -1,0 +1,10 @@
+= link_to board_path(board) do
+  .card
+    .card_title= board.title
+    .card_content= board.content
+    .card_icon
+      = image_tag 'Oval.png'
+    %p kazuki0825
+    %p= board.display_created_at
+    .card_detail
+      = image_tag 'Combined Shape'
