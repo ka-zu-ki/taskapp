@@ -12,4 +12,10 @@
     = f.label :content, 'Description'
   %div
     = f.text_area :content
+  %div
+    = f.label :limit, 'Dedline'
+  %div
+    = f.date_field :limit
+  %div
+    = f.hidden_field :user, :value => user
   = f.submit 'Submit', class: 'btn-primary'
