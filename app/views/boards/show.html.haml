@@ -12,5 +12,10 @@
         .dropdown-content
           = link_to '編集',edit_board_path(@board)
           = link_to '削除', board_path(@board), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' }
+
+  - @tasks.each do |task|
+    = render 'commons/task', task: task 
+
+
 .container  
   = link_to '+Add new card', new_board_task_path(@board)
