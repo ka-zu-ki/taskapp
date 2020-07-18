@@ -3,7 +3,7 @@
     - @task.errors.full_messages.each do |message|
       %li= message
 
-= form_with(model: @task, url: board_tasks_path(@task.board), local: true) do |f|
+= form_with(model: @task, url: board_tasks_path(@task.board), method: 'post', local: true) do |f|
   %div
     = f.label :name, 'Name'
   %div
@@ -16,6 +16,5 @@
     = f.label :limit, 'Dedline'
   %div
     = f.date_field :limit
-  %div
-    = f.hidden_field :user, :value => user
+
   = f.submit 'Submit', class: 'btn-primary'

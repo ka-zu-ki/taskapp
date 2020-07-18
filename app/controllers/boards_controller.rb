@@ -7,7 +7,8 @@ class BoardsController < ApplicationController
     @boards = Board.all
   end
 
-  def show
+  def show 
+    @tasks = @board.tasks
   end
 
   def new
