@@ -4,7 +4,9 @@
   = @task.content
 .task_limit
   = @task.limit
-
+.task_eyecatch
+  = image_tag @task.eyecatch
+%h1 Comment
 - @comments.each do |comment|
   %div
     = comment.content
