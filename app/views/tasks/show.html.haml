@@ -4,3 +4,10 @@
   = @task.content
 .task_limit
   = @task.limit
+
+- @comments.each do |comment|
+  %div
+    = comment.content
+
+.container
+  = link_to 'Add new comment', new_task_comment_path(@task)
