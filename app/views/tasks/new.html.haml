@@ -3,18 +3,18 @@
     - @task.errors.full_messages.each do |message|
       %li= message
 
-= form_with(model: @task, url: board_tasks_path(@task.board), method: 'post', local: true) do |f|
-  %div
-    = f.label :name, 'Name'
-  %div
-    = f.text_field :title, class: 'text'
-  %div
-    = f.label :content, 'Description'
-  %div
-    = f.text_area :content
-  %div
-    = f.label :limit, 'Dedline'
-  %div
-    = f.date_field :limit
+  = form_with(model: @task, url: board_tasks_path(@task.board), local: true) do |f|
+    %div
+      = f.label :name, 'Name'
+    %div
+      = f.text_field :title, class: 'text'
+    %div
+      = f.label :content, 'Description'
+    %div
+      = f.text_area :content
+    %div
+      = f.label :limit, 'Dedline'
+    %div
+      = f.date_field :limit
 
-  = f.submit 'Submit', class: 'btn-primary'
+    = f.submit 'Submit', class: 'btn-primary'
